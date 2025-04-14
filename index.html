@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ITMD541_Lab5_SatyaDiresh</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Dark mode toggle button -->
+  <button id="toggleTheme">🌙 Toggle Dark Mode</button>
+
+  <!-- Main container -->
+  <div class="container">
+    <h1>Tip Calculator</h1>
+
+    <!-- Conversion rate display -->
+    <div class="conversion-rates">
+      <p>$1 USD = €0.95 EUR for EUROS</p>
+      <p>$1 USD = ₹85 INR for Rupees</p>
+    </div>
+
+    <!-- Tip Calculator Form -->
+    <form id="tipForm">
+      <label for="billTotal">Bill Total: $</label>
+      <input type="text" id="billTotal" />
+
+      <label for="totalWithTax">Total Bill with Tax (11%):</label>
+      <input type="text" id="totalWithTax" disabled />
+
+      <label for="currency">Select Currency:</label>
+      <select id="currency">
+        <option value="usd">🇺🇸 US Dollars ($)</option>
+        <option value="inr">🇮🇳 Indian Rupees (₹)</option>
+        <option value="eur">🇪🇺 Euros (€)</option>
+      </select>
+
+      <label for="tipSlider">Tip:</label>
+      <div class="slider-container">
+        <input type="range" id="tipSlider" min="0" max="100" value="0" />
+        <div id="tipBubble">0%</div>
+      </div>
+
+      <label for="convertedTip">Converted Tip Amount:</label>
+      <input type="text" id="convertedTip" disabled />
+
+      <label for="convertedTotal">Converted Total Bill with Tip and Tax:</label>
+      <input type="text" id="convertedTotal" disabled />
+
+      <p id="error" class="error"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f4f4;
+  padding: 30px 15px;
+  margin: 0;
+  color: #333;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #eaeaea;
+}
+
+.container {
+  background-color: #fff;
+  padding: 25px;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+body.dark .container {
+  background-color: #2c2c2c;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.conversion-rates {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.95em;
+}
+
+body.dark .conversion-rates {
+  background-color: #3b3b3b;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+input:disabled {
+  background-color: #eaeaea;
+  color: #333;
+}
+
+body.dark input[type="text"],
+body.dark select {
+  background-color: #444;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+/* Fancy tip slider */
+.slider-container {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 25px;
+}
+
+#tipSlider {
+  width: 100%;
+  accent-color: #2f80ed;
+}
+
+#tipBubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #2f80ed;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  transform: translateX(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+#toggleTheme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+body.dark #toggleTheme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
