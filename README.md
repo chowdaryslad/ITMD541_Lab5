@@ -1,6 +1,6 @@
 # ITMD541_Lab5_SatyaDiresh
 
-📱 Supports Mobile-friendly design
+📱 Compatible with mobile devices
 
 <br/>
 
