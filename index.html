@@ -10,47 +10,54 @@
   <!-- Dark mode toggle button -->
   <button id="toggleTheme">🌙 Toggle Dark Mode</button>
 
-  <!-- Main container -->
+  <!-- Main content container -->
   <div class="container">
     <h1>Tip Calculator</h1>
 
-    <!-- Conversion rate display -->
+    <!-- Conversion rate reference -->
     <div class="conversion-rates">
       <p>$1 USD = €0.95 EUR for EUROS</p>
       <p>$1 USD = ₹85 INR for Rupees</p>
     </div>
 
-    <!-- Tip Calculator Form -->
+    <!-- Calculator form -->
     <form id="tipForm">
+      <!-- Bill total input -->
       <label for="billTotal">Bill Total: $</label>
       <input type="text" id="billTotal" />
 
+      <!-- Tax display -->
       <label for="totalWithTax">Total Bill with Tax (11%):</label>
       <input type="text" id="totalWithTax" disabled />
 
+      <!-- Updated: Currency selection without emojis -->
       <label for="currency">Select Currency:</label>
       <select id="currency">
-        <option value="usd">🇺🇸 US Dollars ($)</option>
-        <option value="inr">🇮🇳 Indian Rupees (₹)</option>
-        <option value="eur">🇪🇺 Euros (€)</option>
+        <option value="usd">US - Dollars ($)</option>
+        <option value="inr">India - Rupees (₹)</option>
+        <option value="eur">EU - Euros (€)</option>
       </select>
 
+      <!-- Tip slider with tooltip -->
       <label for="tipSlider">Tip:</label>
       <div class="slider-container">
         <input type="range" id="tipSlider" min="0" max="100" value="0" />
         <div id="tipBubble">0%</div>
       </div>
 
+      <!-- Output fields -->
       <label for="convertedTip">Converted Tip Amount:</label>
       <input type="text" id="convertedTip" disabled />
 
       <label for="convertedTotal">Converted Total Bill with Tip and Tax:</label>
       <input type="text" id="convertedTotal" disabled />
 
+      <!-- Error display -->
       <p id="error" class="error"></p>
     </form>
   </div>
 
+  <!-- JavaScript logic -->
   <script src="script.js"></script>
 </body>
 </html>
